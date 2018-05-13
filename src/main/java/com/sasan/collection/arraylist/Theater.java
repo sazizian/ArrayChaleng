@@ -24,6 +24,16 @@ public class Theater {
         }
     };
 
+    static  final Comparator<Seat> PriCE_ORDER_LAMBDA=(s1,s2)->{
+        if(s1.getPrice()>s2.getPrice())
+            return 1;
+        else if(s1.getPrice()==s2.getPrice()){
+            return 0;
+        }else
+            return -1;
+
+    };
+
     public Theater(String theaterName, int numbeRows, int seatsPerRow) {
         this.theaterName = theaterName;
 

@@ -2,6 +2,7 @@ package com.sasan.collection.arraylist;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -29,7 +30,9 @@ public class Main {
 //        priceList.add(new Seat("A00",11));
         Collections.sort(seatCopy, Theater.PRICE_ORDER);
         printList(seatCopy);
-
+        System.out.println("==========================================================");
+        Collections.sort(seatCopy,Theater.PriCE_ORDER_LAMBDA);
+        printList(seatCopy);
 
     }
 
